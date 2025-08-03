@@ -65,6 +65,7 @@ test = [
       "coveralls>=2.1.1",
       "requests",
       "pytest-httpserver",
+      "tox>=4.28.4",
 ]
 docs = [
       "sphinx>=7.0.0",
@@ -105,6 +106,12 @@ Changelog = "https://py7zr.readthedocs.io/en/latest/changelog.html"
 [build-system]
 requires = ["setuptools>=63", "build", "setuptools_scm[toml]>=7.0.5"]
 build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.31.0",
+    "ruff>=0.12.7",
+]
 
 [tool.setuptools_scm]
 local_scheme = "no-local-version"
